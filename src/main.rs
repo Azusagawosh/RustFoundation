@@ -11,9 +11,9 @@ println!("{}, x");
 fn main() {
     let mut x = 5; // тут мы применили mut таким образом мы можем теперь менять значение переменной
                    // так как она стала изменяемой.
-    println!("{x}");
+    println!("{}, x");
     x = 6;
-    println!("{x}");
+    println!("{}, x");
 }
 */
 
@@ -36,10 +36,10 @@ fn main() {
     let x = x +1; 
     {
         let x = x * 5;
-        println!("{x}");
+        println!("{}, x);
     }
 
-    println!("{x}");
+    println!("{}, x");
 }
 */
 /*
