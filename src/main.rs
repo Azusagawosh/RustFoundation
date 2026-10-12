@@ -106,18 +106,25 @@ fn main() {
    println!("{}, {}, {}, {}", first, second, ten, five); 
 } 
 */
-/*
+
 fn main() {
     let name = "azusagawosh";
     let ocenka: [i32; 3] = [90, 90, 100];
     let first = ocenka[0];
     let second = ocenka[1];
     let three = ocenka[2];
-    let info: (&str, i32, i32, i32,bool) = ("azusagawosh", 90, 90, 100, true);
-    let names = info.0;
-    let o = info.1;
-    let status = info.2;
-    println!("name is {}, Оценки {}, {}, {}", name, first, second, three);
-    println!("имя студента {}, оценки студента {}, статус студента {}", names, o, status);
+    let info: (&str, bool, i32) = ("четвертый курс", true, 19);
+    let course = info.0;
+    let status = info.1;
+    let average = ocenka[0] + ocenka[1] + ocenka[2];
+    let age = info.2;
+    let grade = ocenka.len();
+    let all = average as f64 / grade as f64;
+    println!("имя студента: {}, возвраст студента: {}, статус студента: {}, курс студента: {}, Оценки: {}, {}, {}", name, age, status, course, first, second, three);
+    println!("сумма azusagawosh: {}", average);
+    println!("кол во оценок: {}", grade);
+    println!("средний балл: {:.2}", all);
 } 
-*/
+
+
+
