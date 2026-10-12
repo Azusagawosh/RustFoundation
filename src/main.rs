@@ -87,4 +87,37 @@ fn main() {
 
 }
 */
-
+/*
+fn main() {
+let x: (i32, char, bool) = (19, 'C', false);
+let nine_teen = x.0;
+let c = x.1;
+let boolean = x.2;
+println!("{}, {}, {}", nine_teen, c, boolean);
+}
+*/
+/*
+fn main() {
+   let x: [i32; 10] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+   let first = x[0];
+   let second = x[1];
+   let ten = x[9];
+   let five = x[4];
+   println!("{}, {}, {}, {}", first, second, ten, five); 
+} 
+*/
+/*
+fn main() {
+    let name = "azusagawosh";
+    let ocenka: [i32; 3] = [90, 90, 100];
+    let first = ocenka[0];
+    let second = ocenka[1];
+    let three = ocenka[2];
+    let info: (&str, i32, i32, i32,bool) = ("azusagawosh", 90, 90, 100, true);
+    let names = info.0;
+    let o = info.1;
+    let status = info.2;
+    println!("name is {}, Оценки {}, {}, {}", name, first, second, three);
+    println!("имя студента {}, оценки студента {}, статус студента {}", names, o, status);
+} 
+*/
