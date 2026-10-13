@@ -30,7 +30,7 @@ const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 */
 
 //Затенение (переменных)\\
-/*
+/*  
 fn main() {
     let x = 5;
     let x = x +1; 
@@ -106,7 +106,7 @@ fn main() {
    println!("{}, {}, {}, {}", first, second, ten, five); 
 } 
 */
-
+/*
 fn main() {
     let name = "azusagawosh";
     let ocenka: [i32; 3] = [90, 90, 100];
@@ -125,6 +125,43 @@ fn main() {
     println!("кол во оценок: {}", grade);
     println!("средний балл: {:.2}", all);
 } 
-
-
-
+*/
+/*
+fn main() {
+let name = "azusagawosh";
+let age = 19;
+let stat = true;
+let product: (&str, &str, &str) = ("mouse", "keyboard", "headphones");
+let m = product.0;
+let k = product.1;
+let h = product.2;
+let prices: [i32; 3] = [12000, 23000, 17000];
+let total = prices[0] + prices[1] + prices[2];
+let length = prices.len();
+let average = total as f64 / length as f64;
+println!("name is {}, age {}, status {},", name, age, stat);
+println!("покупает {}, {}, {}", m, k, h);
+println!("колво продуктов который берет покупатель {}", length);
+println!("общая стоимость: {} тенге",total);
+println!("среднее значение: {:.2}", average);
+}*/
+fn main() {
+let prices: [i32; 5] = [12000, 10000, 20000, 7000, 17000];
+let product: (&str, &str, &str, &str, &str) = ("iphone", "ThinkPad", "headphones", "mouse", "keyboard");
+let one = product.0;
+let two = product.1;
+let three = product.2;
+let four = product.3;
+let five = product.4;
+let total = prices[0] + prices[1] + prices[2] + prices[3] + prices[4];
+let length = prices.len();
+let average = total as f64 / length as f64;
+let payment = 100000;
+let change = payment - total;
+println!("продукты которые взял что бы купить: {}, {}, {}, {}, {}", one, two, three, four, five);
+println!("кол во продуктов: {}", length);
+println!("общая сумма товаров: {}", total);
+println!("сумма которую дал покупатель за товары: {}", payment);
+println!("сумма сдачи которую должен вернуть кассир: {}", change);
+println!("среднее количество от суммы: {:.2}", average);
+}
