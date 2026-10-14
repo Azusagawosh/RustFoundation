@@ -145,6 +145,7 @@ println!("колво продуктов который берет покупат
 println!("общая стоимость: {} тенге",total);
 println!("среднее значение: {:.2}", average);
 }*/
+/*
 fn main() {
 let prices: [i32; 5] = [12000, 10000, 20000, 7000, 17000];
 let product: (&str, &str, &str, &str, &str) = ("iphone", "ThinkPad", "headphones", "mouse", "keyboard");
@@ -157,11 +158,43 @@ let total = prices[0] + prices[1] + prices[2] + prices[3] + prices[4];
 let length = prices.len();
 let average = total as f64 / length as f64;
 let payment = 100000;
-let change = payment - total;
+let change = payment - total;п
 println!("продукты которые взял что бы купить: {}, {}, {}, {}, {}", one, two, three, four, five);
 println!("кол во продуктов: {}", length);
 println!("общая сумма товаров: {}", total);
 println!("сумма которую дал покупатель за товары: {}", payment);
 println!("сумма сдачи которую должен вернуть кассир: {}", change);
 println!("среднее количество от суммы: {:.2}", average);
+}
+*/
+
+fn main() {
+let prices: [i32; 3] = [10000, 20000, 30000];
+let product: (&str, &str, &str) = ("headphones", "iphone", "ThinkPad");
+let one = product.0;
+let two = product.1;
+let three = product.2;
+let total = prices[0] + prices[1] + prices[2];
+let length = prices.len();
+let average = total as f64 / length as f64;
+let payment = 80000;
+let change = payment - total;
+let sum: [i32; 2] = [2500, 2500];
+let tot = sum[0] + sum[1];
+let len = sum.len();
+let aver = tot as f64 / len as f64;
+let paying = 5000;
+let changing = change - tot;
+let biggest = prices[0].max(prices[1]).max(prices[2]);
+let minimal = prices[0].min(prices[1]).min(prices[2]);
+let all_total = total + tot;
+println!("продукты которые покупает: {}, {}, {}", one, two, three);
+println!("сумма которую оплатил: {}", payment);
+println!("сдача которую получит: {}", change);
+println!("что то купил после первой покупки: {}", paying);
+println!("остаток который остался после повторной покупки: {}", changing);
+println!("самая высокая цена: {}", biggest);
+println!("самая низкая цена: {}", minimal);
+println!("общая сумма покупок: {}", all_total);
+println!("название товара у которого самая высокая цена: {}, цена: {}", three, biggest);
 }
