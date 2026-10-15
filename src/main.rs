@@ -167,7 +167,7 @@ println!("сумма сдачи которую должен вернуть ка�
 println!("среднее количество от суммы: {:.2}", average);
 }
 */
-
+/*
 fn main() {
 let prices: [i32; 3] = [10000, 20000, 30000];
 let product: (&str, &str, &str) = ("headphones", "iphone", "ThinkPad");
@@ -198,3 +198,24 @@ println!("самая низкая цена: {}", minimal);
 println!("общая сумма покупок: {}", all_total);
 println!("название товара у которого самая высокая цена: {}, цена: {}", three, biggest);
 }
+*/
+
+fn main() {
+let prices: [i32; 5] = [80000, 100000, 10000, 70000, 30000];
+let product: (&str, &str, &str, &str, &str) = ("iphone", "ThinkPad", "mouse", "android", "headphones");
+let one = product.0;
+let two = product.1;
+let three = product.2;
+let four = product.3;
+let five = product.4;
+let total = prices[0] + prices[1] + prices[2] + prices[3] + prices[4];
+let max = prices[0].max(prices[1]).max(prices[2]).max(prices[3]).max(prices[4]);
+let min = prices[0].min(prices[1]).min(prices[2]).min(prices[3]).min(prices[4]);
+let length = prices.len();
+let average = total as f64 / length as f64;
+println!("самая большая цена товаров: {}", max);
+println!("самая маленькая цена товаров: {}", min);
+println!("общая цена товаров: {}", total);
+println!("средняя цена: {}", average);
+println!("название товара у которой большая цена: {}", two);
+} 
