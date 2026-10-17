@@ -287,3 +287,56 @@ fn main() {
 */
 //тут у нас должны быть одинаковые типы\\
 
+/* training
+fn main() {
+    let number = 99;
+    if number < 100 {
+        println!("true");
+    } else if number == 99 {
+        println!("true");
+    } else {
+        println!("false");
+    }
+}
+*/
+
+/*
+fn main() {
+    let prices: [i32; 4] = [20000, 15000, 45000, 36000];
+    let customer: (&str, i32, bool) = ("azusagawosh", 19, true);
+    let name = customer.0;
+    let age = customer.1;
+    let status = customer.2;
+    let money = 130000;
+    let total = prices[0] + prices[1] + prices[2] + prices[3];
+    let length = prices.len();
+    let average = total as f64 / length as f64;
+    let max = prices[0].max(prices[1]).max(prices[2]).max(prices[3]);
+    let min = prices[0].min(prices[1]).min(prices[2]).min(prices[3]);
+    if age >= 18 {
+        println!("покупка доступна");
+    } else {
+        println!("покупка недоступна");
+    }
+
+    if money >= total {
+        println!("средства успешно списаны, благодарим за покупку");
+    } else {
+        println!("у вас недостаточно средств для покупки");
+    }
+
+    if age < 18 {
+        println!("возраст не соответствует");
+    } else if money < total {
+        println!("возраст соответствует но сумма не достаточная");
+    } else if status {
+        println!("возраст соответствует и сумма достаточная, статус проведен");
+    } else {
+        println!("возраст соответствует сумма достаточная но статус еще не проведен");
+    } 
+
+    println!("имя: {}, возраст: {}, баланс: {}", name, age, money);
+    println!("стоимость покупки: {}", total);
+    println!("средняя цена: {:.2}", average);
+    println!("максимальная сумма: {}, минимальная сумма: {}", max, min);
+} */
