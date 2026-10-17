@@ -237,3 +237,53 @@ println!("самая большая сумма товаров: {}", max);
 println!("самая маленькая сумма товаров: {}", min);
 }
 */
+//Выражения if\\
+//Выражение if позволяет выполнять части кода в зависимости от условий. Вы задаёте\\
+//условие, а затем указываете: "Если это условие выполняется, выполните этот блок кода. Если\\
+//условие не выполняется, не выполняйте этот блок кода".\\
+/*
+fn main() {
+let number = 3;
+
+if number < 5 {
+println!("condition was true");
+} else {
+println!("confition was false");
+}
+}
+*/
+//Обработка нескольких условий с помощью else if\\
+//Можно использовать несколько условий, комбинируя if и else в выражении else if.\\
+//Например:\\
+/*
+fn main() {
+    let number = 6;
+
+
+    if number % 4 == 0 {
+        println!("number is divisible by 4");
+    } else if number % 3 == 0 {
+        println!("number is divisible by 3");
+    } else if number % 2 == 0 {
+
+        println!("number is divisible by 2");
+    } else {
+        println!("number is not divisible by 4, 3, or 2");
+    
+    }
+}
+*/
+//тут будет выполнено до 2 го принта и так как это совпадает программа дальше не будет проверять
+
+//Использование if в инструкции let\\
+/*
+fn main() {
+    let condition = true;
+    let number = if condition { 5 } else { 6 };
+
+    println!("The value of number is: {number}");
+
+}
+*/
+//тут у нас должны быть одинаковые типы\\
+
