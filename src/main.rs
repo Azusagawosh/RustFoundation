@@ -464,3 +464,97 @@ fn main() {
     println!("end sum = {sum}");
 }
 */
+/*
+fn main() {
+    let mut count = 0u32;
+
+    println!("Let's count until infinity!");
+
+    // Infinite loop
+    loop {
+        count += 1;
+
+        if count == 3 {
+            println!("three");
+
+            // Skip the rest of this iteration
+            continue;
+        }
+
+        println!("{}", count);
+
+        if count == 5 {
+            println!("OK, that's enough");
+
+            // Exit this loop
+            break;
+        }
+    }
+}
+*/
+
+//Это возможно, чтобы break или continue наружные петли при работе с вложенным Петли.
+//В этих случаях петли должны быть аннотированы с некоторыми 'label,
+//и этикетка должна быть передана в break// continue Заявление.
+
+/*
+#![allow(unreachable_code, unused_labels)]
+
+fn main() {
+    'outer: loop {
+        println!("Entered the outer loop");
+
+        'inner: loop {
+            println!("Entered the inner loop");
+
+            // This would break only the inner loop
+            //break;
+
+            // This breaks the outer loop
+            break 'outer;
+        }
+
+        println!("This point will never be reached");
+    }
+
+    println!("Exited the outer loop");
+}
+*/
+
+//Одно из применений loopПовторно пытаться оперировать до тех пор, пока она не преуспеет. 
+//Если то операция возвращает значение, хотя вам может понадобиться передать его
+//остальной части Код: положить его после break, и он будет возвращен loop Выражение.
+/*
+fn main() {
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+    println!("{}", result);
+    assert_eq!(result, 20);
+}
+*/
+/*
+fn main() {
+    let mut num = 0;
+    let result = loop {
+        num += 10;
+        if num == 100 {
+            println!("one hundreed");
+            
+            continue;
+        }
+        
+        if num == 200 {
+        break num * 16;
+        }
+        
+    };
+    println!("{}", result);
+}
+*/
