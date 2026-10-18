@@ -341,7 +341,7 @@ fn main() {
     println!("максимальная сумма: {}, минимальная сумма: {}", max, min);
 } 
 */
-
+/*
 fn main() {
     let prices: [i32; 5] = [1200, 3500, 800, 4200, 2300];
     let customer: (&str, i32, bool) = ("azusagawosh", 19, true);
@@ -381,3 +381,86 @@ fn main() {
     println!("Скидка в деньгах: {}", total * discount / 100);
     println!("Итоговая стоимость: {}", total - (total * discount / 100));
 }
+*/
+
+//Повторное выполнение кода с помощью циклов\\
+//В Rust есть три вида циклов: loop, while и for. Давайте попробуем каждый из них.
+//Повторение выполнения кода с помощью loop
+//Ключевое слово loop говорит Rust выполнять блок кода снова и снова до бесконечности
+//пока не будет явно приказано остановиться.
+
+/*
+fn main() {
+    loop {
+        println!("again!");
+    }
+}
+*/
+//Когда запустим эту программу, увидим, как again! печатается снова и снова, пока не остановить программу вручную.
+//К счастью, Rust также предоставляет способ выйти из цикла с помощью кода. 
+//Ключевое слово break нужно поместить в цикл, чтобы указать программе, когда следует прекратить
+//выполнение цикла.
+//
+//Возвращение значений из циклов
+//Одно из применений loop - это повторение операции, которая может закончиться неудачей,
+//например, проверка успешности выполнения потоком своего задания.
+/*
+fn main() {
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is {result}");
+}
+*/
+/*
+fn main() {
+    let mut count = 0;
+    'counting_up: loop {
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if count == 2 {
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+
+        count += 1;
+    }
+    println!("End count = {count}");
+}
+*/
+/*
+fn main() {
+    let mut sum = 69;
+    'up: loop {
+        println!("sum = {sum}");
+        let mut num = 67;
+
+        loop {
+            println!("num = {num}");
+            if num == 60 {
+                break;
+            }
+            if sum == 60 {
+                break 'up;
+            }
+            num -= 1; 
+        }
+        sum -= 3;
+    }
+    println!("end sum = {sum}");
+}
+*/
