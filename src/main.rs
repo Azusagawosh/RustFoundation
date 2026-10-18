@@ -339,4 +339,45 @@ fn main() {
     println!("стоимость покупки: {}", total);
     println!("средняя цена: {:.2}", average);
     println!("максимальная сумма: {}, минимальная сумма: {}", max, min);
-} */
+} 
+*/
+
+fn main() {
+    let prices: [i32; 5] = [1200, 3500, 800, 4200, 2300];
+    let customer: (&str, i32, bool) = ("azusagawosh", 19, true);
+    let name = customer.0;
+    let age = customer.1;
+    let status = customer.2;
+    let money = 15000;
+    let total = prices[0] + prices[1] + prices[2] + prices[3] +  prices[4];
+    let length = prices.len();
+    let average = total as f64 / length as f64;
+    let max = prices[0].max(prices[1]).max(prices[2]).max(prices[3]).max(prices[4]);
+    let min = prices[0].min(prices[1]).min(prices[2]).min(prices[3]).min(prices[4]);
+    let discount: i32;
+    if age < 18 {
+        println!("покупка запрещена");
+    } else if money < total {
+        println!("денег не достаточно");
+    } else if status {
+        println!("заказ оплачен");
+    } else {
+        println!("заказ готов к оплате");
+    }
+    
+    if total < 5000 {
+        discount = 0;
+    } else if total < 10000 { 
+        discount = 5;
+    } else if total < 15000 {
+        discount = 10;
+    } else {
+        discount = 15;
+    }
+    println!("максимальная: {}, минимальная: {}", max, min);
+    println!("средняя стоимость товаров: {:.2}", average);
+    println!("общая сумма товаров: {}", total);
+    println!("имя: {}, возраст: {}, баланс: {}", name, age, money);
+    println!("Скидка в деньгах: {}", total * discount / 100);
+    println!("Итоговая стоимость: {}", total - (total * discount / 100));
+}
