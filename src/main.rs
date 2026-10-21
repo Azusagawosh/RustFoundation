@@ -613,11 +613,49 @@ fn main() {
     }
 }
 */
-
+/*
 fn main() {
     for number in (1..4).rev() {
         println!("{number}!");
     }
     println!("LIFTOFF!!!");
 }
+*/
 
+fn main() {
+    let num: [i32; 4] = [100, 1200, 500, 300];
+    let num1 = 450;
+    let length = num.len();
+    let total = num[0] + num[1] + num[2] + num[3];
+    let average = total as f64 / length as f64;
+    let info: (&str, &str, i32, i32) = ("Erer Yeader", "Levi Akkerman", 19, 23);
+    let antagonist = info.0;
+    let hero = info.1;
+    let age1 = info.2;
+    let age2 = info.3;
+    let total1 = total + num1;
+    let awards: [i32; 4] = [100, 500, 1000, 200];
+    for element in awards {
+        println!("заслуги Леви Аккермана, {element}");
+    }
+    let mut choice = 0;
+    'up: loop {
+        choice += 1;
+        if choice == 1 {
+            println!("Стены в порядке, титанов не обнаружено.");
+        } else if choice == 2 {
+            println!("Разведкорпус отправляется за стены!");
+        } else if choice == 3 {
+            println!("завершение работы.");
+            break 'up;
+        } else {
+            println!("error");
+        }
+    }
+    println!("имя нападающего: {}, возраст: {}", antagonist, age1);
+    println!("имя героя: {}, возраст: {}", hero, age2);
+    println!("общее количество воевавщих: {}", total1);
+    println!("общее кол во умерщих в бою с Ереном: {}", total);
+    println!("общее кол во спасенных Леви Аккерманом: {}", num1);
+    println!("среднее количество мертвых солдатов: {:.2}", average);
+}
