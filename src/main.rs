@@ -687,6 +687,7 @@ fn main() {
     }
 }
 */
+/*
 fn main() {
     let mut num = 0;
     'upp: loop {
@@ -704,3 +705,30 @@ fn main() {
         }
     }
 }
+*/
+/*
+ fn main() {
+    let num: [i32; 10] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    for element in num {
+        println!("numbers: {element}");
+    } 
+}
+
+fn main() {
+    for num in 1..11 {
+        println!("numbers: {num}");
+    }
+}
+*/
+/*
+fn main() {
+'outer: for i in 1..=3 {
+    for j in 1..=3 {
+        if i == j {
+            continue;
+        }
+        println!("{i}, {j}");
+    }
+}
+}
+*/
