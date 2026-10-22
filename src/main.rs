@@ -621,14 +621,14 @@ fn main() {
     println!("LIFTOFF!!!");
 }
 */
-
+/*
 fn main() {
     let num: [i32; 4] = [100, 1200, 500, 300];
     let num1 = 450;
     let length = num.len();
     let total = num[0] + num[1] + num[2] + num[3];
     let average = total as f64 / length as f64;
-    let info: (&str, &str, i32, i32) = ("Erer Yeader", "Levi Akkerman", 19, 23);
+    let info: (&str, &str, i32, i32) = ("Eren Yeader", "Levi Akkerman", 19, 23);
     let antagonist = info.0;
     let hero = info.1;
     let age1 = info.2;
@@ -636,7 +636,7 @@ fn main() {
     let total1 = total + num1;
     let awards: [i32; 4] = [100, 500, 1000, 200];
     for element in awards {
-        println!("заслуги Леви Аккермана, {element}");
+        println!("заслуги Леви Аккермана, {element} золотых монет");
     }
     let mut choice = 0;
     'up: loop {
@@ -658,4 +658,49 @@ fn main() {
     println!("общее кол во умерщих в бою с Ереном: {}", total);
     println!("общее кол во спасенных Леви Аккерманом: {}", num1);
     println!("среднее количество мертвых солдатов: {:.2}", average);
+}
+*/
+//Управляющая конструкция match\\
+//В Rust есть чрезвычайно мощный механизм управления потоком, именуемый match,
+//который позволяет сравнивать значение с различными шаблонами и затем выполнять код в
+//зависимости от того, какой из шаблонов совпал. Шаблоны могут состоять из литеральных
+//значений, имён переменных, подстановочных знаков и многого другого;
+//Думайте о выражении match как о машине для сортировки монет: монеты скользят по дорожке с различными по размеру отверстиями,
+//и каждая монета падает через первое попавшееся отверстие, в которое она поместилась.
+//аким же образом значения проходят через каждый шаблон в match,
+//и при первом же "подходящем" шаблоне значение попадает в соответствующий блок кода, который будет использоваться во время выполнения.
+/*
+fn main() {
+    let mut choice = 0;
+    'up: loop {
+        choice += 1;
+
+        match choice {
+            1 => println!("one: {choice}"),
+            2 => println!("two: {choice}"),
+            3 => {
+                println!("three: {choice}");
+                break 'up;
+            }
+            _ => println!("Error"), // Ловит все остальные числа
+        }
+    }
+}
+*/
+fn main() {
+    let mut num = 0;
+    'upp: loop {
+        num += 10;
+
+        match num {
+            10 => println!("ten: {num}"),
+            100 => println!("one hundreed: {num}"),
+            1000 => println!("one thausand: {num}"),
+            10000 => {
+                println!("ten thausand: {num}");
+                break 'upp;
+            }
+            _ => println!("Error"),
+        }
+    }
 }
