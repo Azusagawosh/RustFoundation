@@ -732,3 +732,17 @@ fn main() {
 }
 }
 */
+
+fn main() {
+    let num: [i32; 10] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let mut index = 0;
+    while index < 10 {
+        let current = num[index];
+        index += 1;
+        if current % 2 == 0 {
+            continue;
+        } 
+            println!("{}", current);
+         
+    }
+}
