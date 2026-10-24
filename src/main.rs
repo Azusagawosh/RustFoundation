@@ -732,7 +732,7 @@ fn main() {
 }
 }
 */
-
+/*
 fn main() {
     let num: [i32; 10] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let mut index = 0;
@@ -746,3 +746,33 @@ fn main() {
          
     }
 }
+*/
+/*
+fn main() {
+    let mass = [2, 9, 12, 7, 15, 2, 18, 5];
+    let mut index = 0;
+    while index < mass.len() {
+        let current = mass[index];
+        index += 1;
+        if current % 3 != 0 {
+            continue;
+        }
+        println!("{}", current);
+    }
+}
+*/
+/*
+fn main() {
+    let mass = [5, 14, 3, 20, 8, 11, 6, 17];
+    let mut index = 0;
+    while index < mass.len() {
+        let current = mass[index];
+        index += 1;
+        if current <= 10 || current % 2 != 0 {
+            continue;
+        }
+        println!("{}", current);
+    }
+
+}
+*/
