@@ -776,3 +776,93 @@ fn main() {
 
 }
 */
+/*
+fn main() {
+    for i in 1..=3 {
+        for j in 1..=3 {
+            if j == 2 {
+                continue;
+            }
+
+            print!("{i}{j} ");
+        }
+    }
+}
+*/
+/*
+fn main() {
+    let num = [3, 8, 12, 5, 16, 7, 20];
+    let mut index = 0;
+    let mut total = 0;
+    while index < num.len() {
+        let current = num[index];
+        index += 1;
+        if current < 10 {
+            continue;
+        }
+
+        if current == 20 {
+            break;
+        }
+        total += current;
+    }
+    println!("{}", total);
+}
+*/
+/*    
+fn main() {
+    let grades = [45, 90, 72, 100, 38, 85, 60, 95];
+    let mut index = 0;
+    let mut total = 0;
+    let mut excellent = 0;
+    while index < grades.len() {
+        let current = grades[index];
+        index += 1;
+        if current < 50 {
+            continue;
+        }
+        if current == 100 {
+            excellent += 1;
+        }
+        total += current;
+    }
+    println!("Сумма: {}", total);
+    println!("Оценок 100: {}", excellent);
+} 
+*/
+/*
+fn main() {
+    let numbers = [3, 8, 12, 5, 16, 7, 20, 24];
+    let mut total = 0;
+    for element in numbers {
+        let current = element;
+        if current < 10 {
+            continue;
+        }
+        if current == 20 {
+            break;
+        }
+        total += current;
+    }
+    println!("{}", total);
+}
+*/
+/*
+fn main() {
+    let numbers = [4, 15, 8, 22, 11, 30, 6, 18];
+    let mut index = 0;
+    let mut total = 0;
+    while index < numbers.len() {
+        let current = numbers[index];
+        index += 1;
+        if current < 10 {
+            continue;
+        }
+        if current == 30 {
+            break;
+        }
+        total += current;
+    }
+    println!("{}", total);
+} 
+*/
