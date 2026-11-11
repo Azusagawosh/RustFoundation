@@ -866,3 +866,53 @@ fn main() {
     println!("{}", total);
 } 
 */
+/*
+fn main() {
+    let condition = false;
+    let number = if condition { 5 } else { 6 };
+
+    println!("The value of number is: {number}");
+}
+*/
+
+fn main() {
+    let mut sr = String::new();
+    sr.push_str("Hello");
+    sr.push_str(" azusagawosh");
+    sr.push('!');
+    let mut x = sr;
+    x.push_str(" I am Backend Developer in the Rust programming language");
+    println!("{x}");
+    let num = 90;
+    let ok = boo(&num);
+    if ok {
+        println!("{num} {ok}");
+    } else {
+        println!("{num} {ok}");
+    }
+    let user1 = User {
+        active: true,
+        username: String::from("azusagawosh"),
+        email: String::from("tpprogist@gmail.com"),
+        sign: 1,
+    };
+    print_user(&user1); 
+}
+
+
+fn boo(s: &i32) -> bool {
+    *s >= 10
+}
+
+
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign: u64,
+}
+
+
+fn print_user(u: &User) {
+    println!("{} {}", u.username, u.email);
+}
