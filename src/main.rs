@@ -874,7 +874,7 @@ fn main() {
     println!("The value of number is: {number}");
 }
 */
-
+/*
 fn main() {
     let mut sr = String::new();
     sr.push_str("Hello");
@@ -916,3 +916,11 @@ struct User {
 fn print_user(u: &User) {
     println!("{} {}", u.username, u.email);
 }
+*/
+
+fn main() {
+    let user = (19, true, 1.89, "azusagawosh", 'R');
+    println!("{}, {}, {}, {}, {}", user.0, user.1, user.2, user.3, user.4);
+}
+
+
