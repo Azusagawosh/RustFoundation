@@ -921,6 +921,37 @@ fn print_user(u: &User) {
 fn main() {
     let user = (19, true, 1.89, "azusagawosh", 'R');
     println!("{}, {}, {}, {}, {}", user.0, user.1, user.2, user.3, user.4);
+
+    for i in (1..=100).rev().step_by(5) {
+        println!("{i}");
+    }
+
+    let mut number = 100;
+    while number > 0 {
+        println!("{number}");
+        number -= 10;
+    }
+    println!("finish");
+
+    for num in (1..101).rev() {
+        if num % 2 == 0 {
+            continue;
+        }
+        println!("{num}");
+    }
+
+    let arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    for el in arr {
+        println!("{el}");
+    }
+
+    macro_rules! my {
+        ($msg:expr) => {
+            println!("{}", $msg);
+        };
+    }
+
+    my!("azusagawosh");
 }
 
 
