@@ -919,6 +919,7 @@ fn print_user(u: &User) {
 */
 
 fn main() {
+    /*
     let user = (19, true, 1.89, "azusagawosh", 'R');
     println!("{}, {}, {}, {}, {}", user.0, user.1, user.2, user.3, user.4);
 
@@ -952,6 +953,27 @@ fn main() {
     }
 
     my!("azusagawosh");
+    */
+    yo();
 }
 
+
+
+fn yo() {
+    let mut v = vec!(10, 20, 30, 40);
+    v.push(50);
+    v.pop();
+    v.remove(0);
+    println!("{:?}", v);
+    println!("{}", v[0]);
+
+    match v.get(1) {
+        Some(el) => println!("{}", el),
+        None => println!("Err"),
+    }
+
+    for el in &v {
+        println!("{el}");
+    }
+}
 
