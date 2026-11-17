@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 //Переменные и изменяемость\\
 /*
 fn main() {
@@ -917,7 +918,7 @@ fn print_user(u: &User) {
     println!("{} {}", u.username, u.email);
 }
 */
-
+/*
 fn main() {
     /*
     let user = (19, true, 1.89, "azusagawosh", 'R');
@@ -976,4 +977,19 @@ fn yo() {
         println!("{el}");
     }
 }
+*/
 
+
+fn main() {
+    let mut map = HashMap::new();
+    map.insert("azusagawosh", 19);
+    map.insert("a9emi", 21);
+    map.insert("Ibadatka", 38);
+    map.insert("Kima", 18);
+    for (key, value) in &map {
+        println!("{key}: {value}");
+    }
+    map.insert("a9emi", 22);
+    println!("{}", map.get("a9emi").unwrap());
+    println!("{:?}", map);
+}
