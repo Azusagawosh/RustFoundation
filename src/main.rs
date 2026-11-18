@@ -979,7 +979,7 @@ fn yo() {
 }
 */
 
-
+/*
 fn main() {
     let mut map = HashMap::new();
     map.insert("azusagawosh", 19);
@@ -993,4 +993,30 @@ fn main() {
     map.insert("azusagawosh", 20);
     println!("{}", map.get("a9emi").unwrap());
     println!("{:?}", map);
+}
+*/
+
+
+struct Human {
+    name: String,
+    age: i32,
+    sex: String,
+    gmail: String,
+    status: bool,
+}
+fn main() {
+    let mut Human1 = Human {
+        name: String::from("a9emi"),
+        age: 22,
+        sex: String::from("female"),
+        gmail: String::from("a9emi@gmail.com"),
+        status: true,
+    };
+    println!("{}", Human1.name);
+    println!("{}", Human1.age);
+    println!("{}", Human1.sex);
+    println!("{}", Human1.gmail);
+    println!("{}", Human1.status);
+    Human1.gmail = String::from("a9emib@gmail.com");
+    println!("{}", Human1.gmail);
 }
