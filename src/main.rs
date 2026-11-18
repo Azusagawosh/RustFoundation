@@ -990,6 +990,7 @@ fn main() {
         println!("{key}: {value}");
     }
     map.insert("a9emi", 22);
+    map.insert("azusagawosh", 20);
     println!("{}", map.get("a9emi").unwrap());
     println!("{:?}", map);
 }
